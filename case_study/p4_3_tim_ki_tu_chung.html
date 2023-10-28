@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string1 = "asdfgt";
+    let string2 = "asjkjg";
+    let array = [];
+    let flag = false;
+    let count = 0;
+    for (let i = 0; i < string1.length; i++) {
+        for (let j = 0; j < string2.length; j++) {
+            if (string2[j] == string1[i]) {
+                flag = true;
+                array.push(string1[i]);
+                count++;
+            }
+        }
+    }
+    alert("Số kí tự giống nhau là: " + count + " gồm: " + array);
+</script>
+</body>
+</html>

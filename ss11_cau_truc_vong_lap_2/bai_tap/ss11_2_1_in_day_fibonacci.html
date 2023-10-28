@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 0, b = 1, result = 0;
+    let number = prompt("Nhập giá trị dãy số bạn muốn in:")
+    let i = 1;
+    while (i < number) {
+        a = b;
+        b = result;
+        result = a + b;
+        document.write(result + "<br>");
+        i++;
+    }
+</script>
+</body>
+</html>

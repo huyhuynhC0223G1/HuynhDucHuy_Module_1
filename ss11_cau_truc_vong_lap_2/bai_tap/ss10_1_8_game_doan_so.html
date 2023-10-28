@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="doanSo()">Bắt đầu</button>
+
+</body>
+<script>
+    function doanSo() {
+        let lag = true;
+        while (lag) {
+            let random = 10 + Math.round(Math.random() * 5);
+            let numbercheck = prompt("Nhập số bạn đoán: ");
+            if (numbercheck == random) {
+                alert("Bạn đã đoán đúng");
+                lag = false;
+            } else if (numbercheck > random) {
+                alert("Số bạn đoán lớn hơn");
+            } else {
+                alert("Số bạn đoán nhỏ hơn");
+            }
+        }
+    }
+    // function doanSo() {
+    //     let number = prompt("Nhập số bạn muốn đoán có giá trị lớn nhất là: ");
+    //     let numberran = Math.floor(Math.random() * number);
+    //     console.log(numberran);
+    //     let numbercheck = prompt("Nhập số bạn đoán");
+    //     let count = 0;
+    //     while (numbercheck != numberran) {
+    //         count++;
+    //         if (count == 4) {
+    //             alert("Bạn hết số lần đoán");
+    //             break;
+    //         } else if (numbercheck < numberran) {
+    //             alert("Số bạn đoán bé hơn");
+    //         } else {
+    //             alert("Số bạn đoán lớn hơn")
+    //         }
+    //         numbercheck = prompt("Nhập số bạn đoán");
+    //     }
+    //     if (count == 4) {
+    //         document.write("Bạn hết số lần đoán");
+    //     } else {
+    //         document.write("Bạn đã đoán đúng số. Chúc mừng bạn!")
+    //     }
+    // }
+
+</script>
+</html>

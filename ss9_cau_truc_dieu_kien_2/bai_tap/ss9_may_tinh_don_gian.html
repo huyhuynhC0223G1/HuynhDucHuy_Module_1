@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"><input id="window" type="text" style="width: 150px"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="nhap(1)"></td>
+        <td><input type="button" value="2" onclick="nhap(2)"></td>
+        <td><input type="button" value="3" onclick="nhap(3)"></td>
+        <td><input type="button" value="+" onclick="nhap('+')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="nhap(4)"></td>
+        <td><input type="button" value="5" onclick="nhap(5)"></td>
+        <td><input type="button" value="6" onclick="nhap(6)"></td>
+        <td><input type="button" value="-" onclick="nhap('-')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="nhap(7)"></td>
+        <td><input type="button" value="8" onclick="nhap(8)"></td>
+        <td><input type="button" value="9" onclick="nhap(9)"></td>
+        <td><input type="button" value="*" onclick="nhap('*')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="AC" onclick="nhapAc()"></td>
+        <td><input type="button" value="0" onclick="nhap(0)"></td>
+        <td><input type="button" value="=" onclick="nhapBang()"></td>
+        <td><input type="button" value="/" onclick="nhap('/')"></td>
+    </tr>
+</table>
+<script>
+    // function nhap1() {
+    //     let string = document.getElementById("window").value;
+    //     document.getElementById("window").value = string + 1;
+    // }
+    // function nhap2() {
+    //     let string = document.getElementById("window").value;
+    //     document.getElementById("window").value = string + 2;
+    // }
+    // function nhapCong() {
+    //     let string = document.getElementById("window").value;
+    //     document.getElementById("window").value = string + "+";
+    // }
+    function nhapAc() {
+        let string = document.getElementById("window").value;
+        document.getElementById("window").value =string.substring(0, string.length -1);
+    }
+
+    function nhap(so) {
+        let string = document.getElementById("window").value;
+        document.getElementById("window").value = string + so;
+    }
+
+    function nhapBang() {
+        let string = document.getElementById("window").value;
+        document.getElementById("window").value = ((eval(string)));//eval: có sẳn phép tính.
+
+    }
+
+
+</script>
+</body>
+</html>

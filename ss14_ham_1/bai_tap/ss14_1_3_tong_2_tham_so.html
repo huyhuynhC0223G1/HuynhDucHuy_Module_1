@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<button onclick="tongSo()">Giá trị trả về:</button>-->
+<script>
+    let number1 = +prompt("Nhập giá trị số thứ nhất: ");
+    let number2 = +prompt("Nhập giá trị số thứ hai: ");
+    let result;
+    function tongSo(a, b) {
+        if (a > b) {
+            alert("Số thứ nhất lớn hơn số thứ hai. ");
+        } else {
+            return a + b;
+        }
+    }
+    result = tongSo(number1, number2);
+    if (result) {
+        document.write("Tổng hai số: " + result);
+    }
+</script>
+</body>
+</html>

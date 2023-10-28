@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let n;
+    // do {
+    //     n = +prompt("Nhập số lượng phần tử của mảng:");
+    // } while (n <= 0 || n > 10)
+    // let array = [];
+    // for (let i = 0; i < n; i++) {
+    //     let element = prompt("Nhập phần tử thứ :" + i);
+    //     array.push(element);
+    // }
+    // let m;
+    // do {
+    //     m = +prompt("Nhập số lượng phần tử của mảng:");
+    // } while (m <= 0 || n > 10)
+    // let array1 = [];
+    // for (let i = 0; i < n; i++) {
+    //     let element = prompt("Nhập phần tử thứ :" + i);
+    //     array.push(element);
+    // }
+    let m = +prompt("Nhập m");
+    let n = +prompt("Nhập n");
+    let sum = 0;
+    let a = [[n], [m]]
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (a[[i][j]] % 2 == 0) {
+                sum += a[i][j];
+            }
+        }
+    }
+    alert(sum);
+</script>
+</body>
+</html>

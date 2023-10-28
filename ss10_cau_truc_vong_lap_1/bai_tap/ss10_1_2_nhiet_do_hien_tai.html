@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhietDo = prompt("Nhập nhiệt độ hiện tại:") * 1;
+    do {
+        if (nhietdo < 20) {
+            nhietdo = "Tăng nhiệt độ";
+        } else if (nhietdo > 100) {
+            nhietdo = "giảm nhiệt độ";
+        } else {
+            nhietdo = "giữ nguyên";
+        }
+
+        alert(nhietdo);
+    }
+    while (nhietdo) ;
+
+
+</script>
+</body>
+</html>

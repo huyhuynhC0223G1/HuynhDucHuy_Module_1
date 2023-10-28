@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function doiXau() {
+
+        let string = "     trAn    Mimh      Huy    ";
+        string = string.toLowerCase()
+        let array = string.split(" ");
+        let arrayA = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] != "") {
+                arrayA.push(array[i])
+            }
+        }
+        let max = 0;
+        let arrayR = [];
+        for (let i = 0; i < arrayR.length; i++) {
+            let result = arrayA[i].charAt(0).toUpperCase() + arrayA[i].slice(1);
+            arrayR.push(result);
+
+            if (arrayR[i].length > max) {
+                max = arrayR[i].length;
+            }
+        }
+        document.write(arrayR.join('') + "<br/>");
+        document.write("Từ dài nhất là = " + max);
+    }
+doiXau();
+
+</script>
+</body>
+</html>

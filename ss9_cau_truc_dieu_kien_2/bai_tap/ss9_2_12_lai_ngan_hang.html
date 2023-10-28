@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienvay = prompt("Nhập số tiền vay") * 1;
+    let laithang = prompt("nhập số lãi hàng tháng(%)") * 1;
+    let thoigian = prompt("Nhập số tháng vay") * 1;
+    let laime = tienvay * (laithang / 100) * thoigian;
+    let laicon = (tienvay + laime) * (laithang / 100) * thoigian;
+    if (thoigian <= 3) {
+        alert("Tiền lãi cần trả: " + laime);
+    } else {
+        alert("Tiền lãi cần trả: " + laicon);
+    }
+
+</script>
+
+</body>
+</html>

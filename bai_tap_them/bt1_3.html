@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = +prompt("Nhập số lượng phần tử của mảng:");
+    } while (n < 0 || n > 10);
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let element = +prompt("Nhập phần tử thứ: " + i);
+        array.push(element);
+    }
+    alert("Mảng sau khi nhập là: " + array);
+    checkArray(array)
+
+    function checkArray(arr) {
+        let count1 = 0;
+        let count2 = 0;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i - 1] > arr[i]) {
+                count1++;
+            } else if (arr[i - 1] < arr[i]) {
+                count2++;
+            }
+        }
+        if (count1 == arr.length - 1 || count2 == arr.length - 1) {
+            alert("OK");
+        } else {
+            alert("NO");
+        }
+    }
+
+    // function checkArray2(arr) {
+    //     let count = 1;
+    //     for (let i = 1; i < array.length; i++) {
+    //         if (array[i - 1] < array[i]) {
+    //             count++;
+    //         }
+    //     }
+    //     if (count == array.length) {
+    //         alert("OK");
+    //     } else {
+    //         alert("NO");
+    //     }
+    // }
+</script>
+</body>
+</html>

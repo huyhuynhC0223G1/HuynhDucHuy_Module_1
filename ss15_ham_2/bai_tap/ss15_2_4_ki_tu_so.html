@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let text = prompt("Nhập kí tự cần kiểm tra: ");
+    let flag = false;
+    function kiemTra(text) {
+        if (text % 1 == 0) {
+            flag = true;
+        }
+        if (flag) {
+            alert("true");
+        } else {
+            alert("false");
+        }
+    }
+    kiemTra(text);
+</script>
+</body>
+</html>

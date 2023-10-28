@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let star = prompt("Nhập tên ngôi sao: ");
+
+    function checkStar(star) {
+        let b = array1.indexOf(star);
+        if (b == -1) {
+            alert("Không có dữ liệu.");
+        } else {
+            alert(array2[b]);
+        }
+    }
+
+    checkStar(star);
+</script>
+</body>
+</html>

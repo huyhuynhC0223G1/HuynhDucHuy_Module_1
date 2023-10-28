@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="hienthi"> </p>
+<script>
+    class SanPham {
+        constructor(id, ten, gia) {
+            this.id = id;
+            this.ten = ten;
+            this.gia = gia;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        setId() {
+            this.id = id;
+        }
+
+        setTen() {
+            this.ten = ten;
+        }
+
+        setGia() {
+            this.gia = gia;
+        }
+    }
+    let array=[];
+    let arr1=new SanPham(1,"vở",789);
+    let arr2=new SanPham(2,"vở",123);
+    let arr3=new SanPham(3,"vở",321);
+    array.push(arr1,arr2,arr3);
+
+    function hienThi(){
+        array.sort(function (c1,c2){
+            return c1.gia -c2.gia;
+        })
+        let bang ="    <table border=\"1\">\n" +
+            "        <tr>\n" +
+            "            <th>Mã sản phẩm</th>\n" +
+            "            <th>Tên sản phẩm</th>\n" +
+            "            <th>Giá sản phẩm</th>\n" +
+            "        </tr>"
+        for (let i = 0; i < array.length; i++) {
+            bang += '        <tr>\n' +
+                '            <td>'+array[i].getId()+'</td>\n' +
+                '            <td>'+array[i].getTen()+'</td>\n' +
+                '            <td>'+array[i].getGia()+'</td>\n' +
+                '        </tr>'
+        }
+        bang+= '</table>';
+        document.getElementById("hienthi").innerHTML=bang;
+    }
+hienThi()
+
+
+</script>
+</body>
+</html>

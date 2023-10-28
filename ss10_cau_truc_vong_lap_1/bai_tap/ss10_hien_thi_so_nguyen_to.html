@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="number"></p>
+<script>
+    // let isPrime = true;
+    // let number = prompt("Mời bạn nhập số cần kiểm tra") * 1;
+    // for (let i = 2; i < number; i++) {
+    //     if (number % i == 0) {
+    //         isPrime = false;
+    //     }
+    // }
+    // if(isPrime) {
+    //     alert(number + " là số nguyên tố.");
+    // }
+    let count = 0;
+    let number = 0;
+    while (count < 30) {
+        let isPrime = true;
+        if (number == 2 || number == 3) {
+            alert(number + "là số nguyên tố");
+            number++;
+            count++;
+
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                isPrime = false;
+            }
+        }
+        if (isPrime) {
+            alert(number + "là số nguyên tố");
+            count++;
+        }
+        number++
+    }
+</script>
+</body>
+</html>

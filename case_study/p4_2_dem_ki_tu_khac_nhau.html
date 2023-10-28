@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = "adsdgdsg";
+    let array = Array.from(string);
+    let newarray = [];
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (newarray.indexOf(array[i]) !== -1) {
+            count = count;
+        } else {
+            count++;
+            newarray.push(array[i]);
+        }
+    }
+    alert("Số lượng kí tự khác nhau là: " + count);
+    alert("Những kí tự khác nhau gồm: " + newarray);
+</script>
+</body>
+</html>

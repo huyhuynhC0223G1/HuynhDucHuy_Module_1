@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function changePlaces() {
+        let array = [number1, number2];
+        let result = array[0];
+        array[0] = array[1];
+        array[1] = result;
+        alert(array);
+    }
+    let number1 = prompt("Nhập số nguyên thứ nhất: ") * 1;
+    let number2 = prompt("Nhập số nguyên thứ hai: ") * 1;
+    changePlaces();
+</script>
+</body>
+</html>

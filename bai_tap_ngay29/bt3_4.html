@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="themMoi()">Thêm mới</button>
+<button onclick="suaDoi()">Sửa thông tin máy tính</button>
+<button onclick="xoaMayTinh()">Xóa</button>
+<p id="display"></p>
+
+<script>
+    class MayTinh {
+        constructor(ma, ten, hang, gia) {
+            this.ma = ma;
+            this.ten = ten;
+            this.hang = hang;
+            this.gia = gia;
+        }
+
+        getMa() {
+            return this.ma;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getHang() {
+            return this.hang;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        setMa() {
+            this.ma = ma;
+        }
+
+        setTen() {
+            this.ten = ten;
+        }
+
+        setHang() {
+            this.hang = hang;
+        }
+
+        setGia() {
+            this.gia = gia;
+        }
+    }
+    let arr = [];
+    let arr1 = new MayTinh(1, "laptop1", "dell", 200);
+    let arr2 = new MayTinh(2, "laptop1", "dell", 300);
+    arr.push(arr1,arr2);
+
+    function dislay() {
+        let tableString = '<table border="1">' +
+            '<tr>\n' +
+            '        <th>Mã máy</th>\n' +
+            '        <th>Tên máy</th>\n' +
+            '        <th>Hãng sản xuất</th>\n' +
+            '        <th>Giá bán</th>\n' +
+            '    </tr>'
+        for (let i = 0; i < arr.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + arr[i].getMa() + '</td>\n' +
+                '        <td>' + arr[i].getTen() + '</td>\n' +
+                '        <td>' + arr[i].getHang() + '</td>\n' +
+                '        <td>' + arr[i].getGia() + '</td>\n' +
+                '    </tr>'
+        }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+    dislay();
+
+
+
+</script>
+</body>
+</html>

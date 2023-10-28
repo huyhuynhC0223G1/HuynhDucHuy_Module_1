@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("Nhập số lượng phần tử trong mảng:")
+    } while (n < 0 || n > 20);
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let a;
+            a = prompt("Nhập phân tử thứ" + i);
+            arr.push(a);
+            for(let j =0; j<arr.length;i++)
+            if(arr.indexOf(arr[j])!=-1){
+                alert("Kí tự trùng lặp, mời bạn nhập lại");
+                break;
+            }
+    }
+    alert("Mảng sau khi nhập là:" + arr);
+</script>
+</body>
+</html>

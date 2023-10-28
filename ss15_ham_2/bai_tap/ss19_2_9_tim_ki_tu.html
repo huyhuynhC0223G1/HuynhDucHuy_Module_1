@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timKiem(array,object) {
+        let count = 0;
+        let flag = false;
+        for (let i = 0; i < array.length; i++) {
+            if (object == array[i]) {
+                count++;
+                flag = true;
+            } else {
+                count = count;
+            }
+        }
+        if (flag) {
+            alert("Số lần kí tự xuất hiện trong mảng là: " + count);
+        } else {
+            alert("-1");
+        }
+    }
+    let array = [0, 3, 5, 9, 8, 3, 8, 4, 0, 3];
+    let object = +prompt("Nhập kí tự cần tìm kiếm: ");
+    timKiem(array,object);
+</script>
+</body>
+</html>

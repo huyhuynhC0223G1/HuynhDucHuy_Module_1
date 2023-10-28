@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [2, 3, 4, 5];
+    let newarray = [array[0]];
+    let fixsum = 0;
+    let sum = 0;
+    for (let i = 0; i < array.length - 1; i++) {
+        sum += array[i];
+        fixsum = sum + array[i + 1];
+        newarray.push(fixsum);
+    }
+    alert(newarray);
+</script>
+</body>
+</html>

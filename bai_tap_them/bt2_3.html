@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n
+    do {
+        n = +prompt("Nhập số lượng phần tử trong mảng:")
+    } while (n < 0 || n > 20);
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let a = +prompt("Nhập phần tử thứ " + i);
+        arr.push(a);
+    }
+    alert("Mảng sau khi nhập là:");
+    let flag = true;
+    for (let i = 0; i < arr.length / 2; i++) {
+        if (arr[i] != arr[arr.length - i - 1]) {
+            flag = false;
+            break;
+        } else {
+            flag = true;
+        }
+    }
+    if (flag) {
+        alert("OK");
+    } else {
+        alert("No");
+    }
+
+</script>
+</body>
+</html>

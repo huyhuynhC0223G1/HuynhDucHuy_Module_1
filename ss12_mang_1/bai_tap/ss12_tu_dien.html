@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="string" type="text">
+<button onclick="tranSlate()">Translate</button>
+<br>
+<p id="result"></p>
+<script>
+    function tranSlate() {
+        let ENG = ["banana", "apple", "orange", "pencil", "book"];
+        let VIE = ["quả chuối", "quả táo", "quả cam", "bút chì", "quyển sách"];
+        let sTring = document.getElementById("string").value;
+        let indexEng = 0;
+        let reSult;
+        for (let i = 0; i < ENG.length; i++) {
+            if (sTring == ENG[i]) {
+                indexEng = i;
+                for (let j = 0; j < VIE.length; j++) {
+                    if (indexEng == j) {
+                        reSult = VIE[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML = reSult;
+    }
+</script>
+</body>
+</html>

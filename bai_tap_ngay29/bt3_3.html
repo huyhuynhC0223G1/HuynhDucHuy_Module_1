@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function fibonaci(array) {
+        let arrB = [];
+        let a = 0;
+        let b = 1;
+        let result = 0;
+        arrB.push(result);
+        let i = 1;
+        while (i < 10) {
+            a = b;
+            b = result;
+            result = a + b;
+            arrB.push(result);
+            i++;
+        }
+        alert(arrB)
+        let arr = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1];
+        let arrR = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (arrB[j] == arr[i]) {
+                    arrR.push(arr[i]);
+
+                }
+            }
+        }
+        arrR.sort(function (a, b) { return a - b});
+        alert(arrR);
+    }
+
+    fibonaci()
+</script>
+</body>
+</html>

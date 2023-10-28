@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soVon = prompt("Nhập số tiền ban đầu: ") * 1;
+    let laiMe = prompt("Nhập lãi hàng tháng(%): ") * 1;
+    let thoiGian = prompt("Nhập số tháng cho vay: ") * 1;
+    let laiCon = 0;
+    let tongTien = 0;
+    for (let i = 1; i = thoiGian; i++) {
+        laiCon = soVon * (laiMe / 100) * i;
+        tongTien = (soVon + laiCon);
+    }
+    document.write(tongTien);
+</script>
+</body>
+</html>

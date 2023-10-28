@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="themMoi()">Thêm mới học viên</button>
+<button onclick="suaDoi()">Sửa thông tin học viên</button>
+<button onclick="xoaHocVien()">Xóa học viên</button>
+<p id="display"></p>
+<script>
+  class Hocvien {
+      constructor(ma, ten, lop, email, ngaysinh) {
+          this.ma = ma;
+          this.ten = ten;
+          this.lop = lop;
+          this.email = email;
+          this.ngaysinh = ngaysinh;
+      }
+
+      getMa() {
+          return this.ma;
+      }
+
+      getTen() {
+          return this.ten;
+      }
+
+      getLop() {
+          return this.lop;
+      }
+
+      getEmail() {
+          return this.email;
+      }
+
+      getNgaysinh() {
+          return this.ngaysinh;
+      }
+  }
+  function dislayProducts() {
+      let tableString = '<table border="1">\n' +
+          '        <tr>\n' +
+          '            <th>Mã học viên</th>\n' +
+          '            <th>Tên</th>\n' +
+          '            <th>Lớp</th>\n' +
+          '            <th>Email</th>\n' +
+          '            <th>Ngày sinh</th>\n'
+      '        </tr>\n';
+      for (let i = 0; i < tenArray.length; i++) {
+          tableString += '<tr>\n' +
+              '    <td>HV-000' + maArray[i] + '</td>\n' +
+              '    <td>' + tenArray[i] + '</td>\n' +
+              '    <td> C1022G1</td>\n' +
+              '    <td>' + emailArray[i] + '</td>\n' +
+              '    <td>' + ngaySinhArray[i] + '</td>\n' +
+              '</tr>'
+      }
+      tableString += '</table>';
+      document.getElementById("display").innerHTML = tableString;
+  }
+  let maArray = [1, 2, 3];
+  let tenArray = ["Nguyễn Văn A", "Nguyễn Văn B", "Nguyễn Văn C"];
+  let emailArray = ["abc@gmai.com", "zxc@gmai.com", "qwe@gmai.com"];
+  let ngaySinhArray = ["01/01/2000", "30/06/2000", "25/10/2000"]
+  dislayProducts();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let stt = [1, 2, 3, 4, 5, 6, 7];
+    let gia = [10, 12, 15, 15, 10, 20];
+    let menu;
+    do {
+        menu = +prompt("1(Cafe), 2(Cam vắt, 3(Nước ép cà rốt), 4(Nước ép cà chua), 5(Nước lọc),6(Nước dừa), 7(thoát gọi món)");
+        if (menu == 7) {
+            alert("Cảm ơn bạn đã ghế qua.");
+            break;
+        } else {
+            for (let i = 0; i < stt.length; i++) {
+                if (menu == stt[i]) {
+                    alert("Giá của sản phẩm là: " + gia[i]);
+                    let dat = +prompt("Nhập số lượng bạn muốn lấy:");
+                    if (dat > 0) {
+                        alert("số tiền bạn phải trả là: " + (dat * gia[i]));
+                    }
+                }
+            }
+        }
+    } while (menu);
+
+</script>
+
+</body>
+</html>

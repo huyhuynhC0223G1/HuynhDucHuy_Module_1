@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    <!--Bài 1:    -->
+    // let string=["Red","Green","White","Black"];
+    // document.write(string.toString()+"<br>");
+    // document.write(string.join());
+
+    // Bài 2
+    // let number = [2, 2, 4, 3, 6, 9, 6, 4, 5];
+    // let result = [number[0]];
+    // for (let i = 1; i < number.length; i++) {
+    //     if (number[i - 1] % 2 === 0 && number[i] % 2 === 0) {
+    //         result.push('-', number[i]);
+    //     } else {
+    //         result.push(number[i]);
+    //     }
+    // }
+    // document.write(result.join(''));
+    // Bài 3
+    let string = ["H", "u", "y", "n", "h", "D", "u", "c", "H", "u", "y"];
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [string[0 - 1]];
+    for (let i = 0; i < string.length; i++) {
+        if (upper.indexOf(string[i]) !== -1) {
+            result.push(string[i].toLowerCase());
+        } else if (lower.indexOf(string[i]) !== -1) {
+            result.push(string[i].toUpperCase());
+        } else {
+            result.push(string[i]);
+        }
+    }
+    document.write(result.join(''));
+</script>
+</body>
+</html>

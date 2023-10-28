@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienLuong = +prompt("Nhập thu nhập trong tháng của bạn");
+    if (tienLuong >= 1500000) {
+        document.write("Thuế phải nộp: " + tienLuong * 0.2 + " Lương sau thuế là: " + (tienLuong - tienLuong * 0.2));
+    } else if (tienLuong >= 7000000) {
+        document.write("Thuế phải nộp: " + tienLuong * 0.1 + " Lương sau thuế là: " + (tienLuong - tienLuong * 0.1));
+    } else {
+        document.write("Thuế phải nộp: " + tienLuong * 0.05 + " Lương sau thuế là: " + (tienLuong - tienLuong * 0.05));
+    }
+
+</script>
+</body>
+</html>

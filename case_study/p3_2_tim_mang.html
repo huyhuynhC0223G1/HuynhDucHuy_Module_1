@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [1, 2, 3, 4, 5];
+    let arr2 = [3, 4, 5, 7, 6, 7, 8, 9, 1, 2];
+    let arr = [];
+    let flag = false;
+
+    for (let i = 0; i < arr2.length; i++) {
+        flag = true;
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr2[i] == arr1[j]) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            if (arr.indexOf(arr2[i]) == -1) {
+
+            }
+        }
+    }
+    alert(arr);
+
+
+</script>
+</body>
+</html>

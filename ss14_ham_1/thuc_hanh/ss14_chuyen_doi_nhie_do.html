@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chuyển đổi nhiệt độ</h1>
+<p>Nhiệt độ(F)</p>
+<input type="number" id="enter"
+       oninput="nhietDo(this.value)"
+       onchange="nhietDo(this.value)">
+<p>chuyển đổi:<span id="chuyendoi"></span></p>
+<script>
+    function nhietDo(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("chuyendoi").innerHTML = (valNum - 32) / 1.8;
+    }
+</script>
+</body>
+</html>

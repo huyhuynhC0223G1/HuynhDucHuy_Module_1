@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let daySo = [1, 2, 3, 4, 5];
+    let batDau = 0;
+    let ketThuc = daySo.length - 1;
+    while (batDau < ketThuc) {
+        let b = daySo[batDau];
+        daySo[batDau] = daySo[ketThuc];
+        daySo[ketThuc] = b;
+        batDau++;
+        ketThuc--;
+    }
+    document.write(daySo);
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Số ngày trong một tháng</h2>
+<input id="nhap1" type="text">
+<button id="tinh1" type="button" onclick="soNgay()">Tính số ngày</button><br>
+<br><p id="result"></p>
+<script>
+    function soNgay() {
+        let thang = +document.getElementById("nhap1").value;
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                result="31 ngày"
+                break;
+            case 2:
+                let year = prompt("Mời bạn nhập năm cần kiểm tra:") * 1;
+                if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
+                    result="29 ngày"
+                } else {
+                    result="28 ngày";
+                }
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                result="30 ngày";
+                break;
+            default:
+                result="Bạn nhập không phải từ tháng 1 -> 12";
+        }
+        document.getElementById("result").innerHTML = result;
+
+    }
+</script>
+</body>
+</html>

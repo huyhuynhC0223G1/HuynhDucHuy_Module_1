@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert("Công thức bâc 2: ax^2 + bx + c = 0(a!=0)")
+    let a = prompt("Nhập số a") * 1;
+    let b = prompt("Nhập số b") * 1;
+    let c = prompt("Nhập số c") * 1;
+    let denta = (b * b) - (4 * a * c);
+    if (denta < 0) {
+        alert("phương trình vô nghiệm");
+    } else if (denta == 0) {
+        let x = ((-b) / (2 * a));
+        alert(x);
+    } else {
+        let x1 = ((-b) + (Math.sqrt(denta))) / (2 * a);
+        let x2 = ((-b) - (Math.sqrt(denta))) / (2 * a);
+        alert(x1);
+        alert(x2);
+    }
+</script>
+</body>
+</html>

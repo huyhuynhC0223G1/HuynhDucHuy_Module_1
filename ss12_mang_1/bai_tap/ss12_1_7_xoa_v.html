@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [2, 6, 6, 9, 4];
+    let v = prompt("Nhập số V: ");
+    let i = 0;
+    while (i < number.length) {
+        if (v == number[i]) {
+            for (let j = i; j < number.length - 1; j++) {
+                number[j] = number[j + 1];
+                if (number[j + 1] == v) {
+                    i--;
+                } else {
+                    continue;
+                }
+            }
+            number[number.length - 1] = 0;
+        }
+        i++;
+    }
+    document.write(number);
+</script>
+</body>
+</html>

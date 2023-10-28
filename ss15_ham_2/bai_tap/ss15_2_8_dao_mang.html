@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function daoMang(array) {
+        let first = 0;
+        let last = array.length - 1;
+        while (first < last) {
+            let text = array[first];
+            array[first] = array[last];
+            array[last] = text;
+            first++;
+            last--;
+        }
+        alert(array);
+    }
+
+    let n;
+    do {
+        n = +prompt("Nhập số lương phân tử trong mảng: ");
+    } while (n <= 0 || n > 20);
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let element = prompt("Nhập phân tử thứ " + i);
+        array.push(element);
+    }
+    alert("Mảng sau khi nhập là: " + array);
+    daoMang(array);
+</script>
+</body>
+</html>
